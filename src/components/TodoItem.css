@@ -1,0 +1,14 @@
+.TodoItem {
+    font: 20px 'Work Sans', sans-serif;
+	line-height: 1.4em;
+	color: #4d4d4d;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
