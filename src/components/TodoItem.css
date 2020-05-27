@@ -1,14 +1,50 @@
 .TodoItem {
-    font: 20px 'Work Sans', sans-serif;
+	display: flex;
+	align-items: center;
+    font: 24px 'Work Sans', sans-serif;
 	line-height: 1.4em;
 	color: #4d4d4d;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-weight: 400;
+	user-select: none;
+	padding: 12px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.complete {
+.TodoItem:hover > i {
+	display: block;
+}
+
+.TodoItem > p {
+	margin-left: 20px;
+}
+
+.TodoItem > i {
+	display: none;
+	margin-left: auto;
+	font-size: 16px;
+	color: #d88989;
+}
+
+.TodoItem > i:hover {
+	color: #d41e1e;
+}
+
+.TodoItem:last-child {
+	border-bottom: none;
+}
+
+.complete > p{
     text-decoration: line-through;
     opacity: 0.3;
+}
+
+.check-img {
+	width: 24px;
+}
+
+p {
+	margin: 0;
 }
