@@ -5,13 +5,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-		newItem: '',
-        todoList: [
-            { title: "todo1", isComplete: true },
-            { title: "todo2", isComplete: true },
-            { title: "todo3", isComplete: true },
-            { title: "todo4", isComplete: true },
-        ]
+		  newItem: '',
+      todoList: [
+            { title: "todo1", isComplete: false },
+            { title: "todo2", isComplete: false },
+            { title: "todo3", isComplete: false },
+            { title: "todo4", isComplete: false },
+      ]
     }
     this.onAllItemClick = this.onAllItemClick.bind(this);
     this.onKeyUp = this.onKeyUp.bind(this);
@@ -30,9 +30,12 @@ class App extends Component {
   }
 
   onAllItemClick() {
+    let TodoItems = this.state.todoList;
+    let on = TodoItems.filter((i) => i.isComplete === false);
     this.setState({
-      todoList: this.state.todoList.map((i) => {
-        return i.isComplete = !i.isComplete;
+      todoList: TodoItems.map((i) => {
+        i.isComplete = on.length > 0 ? true : false;
+        return i;
       })
     });
   }
