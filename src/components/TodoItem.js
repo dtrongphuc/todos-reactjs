@@ -1,22 +1,20 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import './TodoItem.css'
-import checkCircle from '../img/circle.svg';
-import checked from '../img/check.svg';
 class TodoItem extends Component {
     render() {
-        const { item, onClick } = this.props;
-        let url = checkCircle;
+        const { item, onChange, onClick} = this.props;
+        let checked = "";
         if(item.isComplete) {
-            url = checked;
+            checked = "checked"
         }
         return (
             <div className={classNames('TodoItem', {
                 complete: item.isComplete 
             })}>
-                <img onClick={onClick} src={url} className="check-img" aria-hidden alt="this is check image"></img>
+                <input checked={checked} onChange={onChange} type="checkbox" className="todo-check"></input>
                 <p>{item.title}</p>
-                <i className="fas fa-times"></i>
+                <i onClick={onClick} className="fas fa-times delete-btn"></i>
             </div>
         );
     }

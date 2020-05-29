@@ -41,8 +41,14 @@
     opacity: 0.3;
 }
 
-.check-img {
-	width: 24px;
+input[type=checkbox]  {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    outline: none;
 }
 
 p {
