@@ -1,3 +1,9 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .App {
 	background-color: #ffffff;
 	text-align: center;
@@ -24,4 +30,68 @@
 	font-size: 24px;
 	border: none;
 	outline: none;
+}
+
+.inputTodo::placeholder {
+    color: crimson;
+    opacity: 0.5;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.footer {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    line-height: 1.4em;
+    font-weight: 300;
+	color: #777777;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    padding: 0 16px;
+    height: 40px;
+}
+
+.count {
+    margin-right: auto;
+}
+
+.footer > ul {
+    margin-right : auto;
+}
+
+.btn {
+    margin: 0 8px;
+    padding: 0;
+    font-weight: 300;
+}
+
+.selected {
+    border: 1px solid #EFD5D5;
+    border-radius: 3px;
+}
+
+.option-link {
+    display: block;
+    padding: 0 8px;
+    color: #777777;
+}
+
+.option-link:hover {
+    text-decoration: none;
+    color: unset;
+}
+
+.hide {
+    display: none;
+}
+
+.clear-completed {
+    user-select: none;
+}
+
+.clear-completed:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }

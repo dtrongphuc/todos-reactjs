@@ -1,7 +1,8 @@
 .TodoItem {
 	display: flex;
-	align-items: center;
-    font: 24px 'Work Sans', sans-serif;
+    align-items: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
 	line-height: 1.4em;
 	color: #4d4d4d;
 	margin: 0 auto;
@@ -11,6 +12,11 @@
 	user-select: none;
 	padding: 12px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    margin-left: 16px;
+    margin-bottom: 0;
 }
 
 .TodoItem:hover > i {

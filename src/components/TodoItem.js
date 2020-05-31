@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './TodoItem.css'
 class TodoItem extends Component {
     render() {
-        const { item, onChange, onClick} = this.props;
+        const { item, onChange, onClick, onDoubleClick} = this.props;
         let checked = "";
         if(item.isComplete) {
             checked = "checked"
@@ -13,7 +13,7 @@ class TodoItem extends Component {
                 complete: item.isComplete 
             })}>
                 <input checked={checked} onChange={onChange} type="checkbox" className="todo-check"></input>
-                <p>{item.title}</p>
+                <label onDoubleClick={onDoubleClick} className="label">{item.title}</label>
                 <i onClick={onClick} className="fas fa-times delete-btn"></i>
             </div>
         );
