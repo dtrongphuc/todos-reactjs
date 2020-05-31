@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types'
 import './TodoItem.css'
 class TodoItem extends Component {
     render() {
@@ -19,5 +20,15 @@ class TodoItem extends Component {
         );
     }
 }
+
+TodoItem.propTypes = {
+    item: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        isComplete: PropTypes.bool.isRequired
+    }),
+    onClick: PropTypes.func,
+    onChange: PropTypes.func,
+    onDoubleClick: PropTypes.func
+};
 
 export default TodoItem;
